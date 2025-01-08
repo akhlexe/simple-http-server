@@ -1,3 +1,3 @@
 **Simple Http Server**
 
-Building a simple http server from scratch to understand more how web servers work
+Building a simple HTTP server from scratch to better understand how web servers work.
