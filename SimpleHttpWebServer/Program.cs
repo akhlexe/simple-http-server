@@ -26,5 +26,13 @@ while(true)
     string request = Encoding.UTF8.GetString(buffer, 0, bytesReceived);
     Console.WriteLine($"Received request:\n{request}");
 
+    string responseStr = "HTTP/1.1 200 OK\r\n" +
+                         "Content-Type: text/plain\r\n" +
+                         "Content-Length: 13\r\n" +
+                         "\r\n" +
+                         "Hello, world!";
+
+    handler.Send(Encoding.UTF8.GetBytes(responseStr));
+
     handler.Close();
 }
